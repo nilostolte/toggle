@@ -8,9 +8,9 @@ At the time I used gluLookAt to define the camera, and GLUT for user interaction
 
 The $\vec{up}$ vector (that should be rather noted as $\hat{up}$, since it's unitary) just corresponds to the $y$ axis of the camera, whereas the unitary viewing vector $\hat{v}$ (which points to the target from the observer's position) is the $z$ axis of the camera. We obtain the $x$ axis of the camera by calculating $\hat{v}\times\hat{up}$. With these three vectors one can construct a matrix to convert from the 3D scene to the camera space. With this matrix one doesn't need to use gluLookAt, but we simply apply the matrix before showing the 3D scene in OpenGL.
 
-In this program we continue to use gluLookAt for simplicity, since it's easier to understand and use.
+In this program I continue to use gluLookAt for simplicity, since it's easier to understand and use.
 
-In C language we represent the observer position ($obs$) by its coordinates and $\vec{up}$ vector by its components using a struct called $Point$:
+In C language observer position ($obs$) is represented by its coordinates and $\vec{up}$ vector by its components using a struct called $Point$:
 
 ``` C
 typedef struct {
