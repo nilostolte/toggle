@@ -10,7 +10,7 @@ The $\vec{up}$ vector (that should be rather noted as $\hat{up}$, since it's uni
 
 In this program I continue to use gluLookAt for simplicity, since it's easier to understand and use.
 
-In C language observer position ($obs$) is represented by its coordinates and $\vec{up}$ vector by its components using a struct called $Point$:
+In C language the observer position ($obs$) is represented by its coordinates and $\vec{up}$ vector by its components using a struct called $Point$:
 
 ``` C
 typedef struct {
