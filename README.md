@@ -1,4 +1,6 @@
-# Generic Visualization of 3D scenes in OpenGL
+# Toggle: 
+
+# Tool for Generically Visualize and Debug 3D Scenes in OpenGL
 
 This document gives the conventions, the theoretic basis, as well as the implementation details for a generic demo to visualize a 3D scene interactively by using keyboard arrows and other keyboard keys to move the observer around the object, approach the object, go farther away from the object, etc. This is an old program I wrote in C for Silicon Graphics GL in the mid-90's, that I previously ported to OpenGL, and that is now revamped to be shared as an open source software. 
 
