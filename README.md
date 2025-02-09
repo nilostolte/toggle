@@ -2,7 +2,7 @@
 
 # Tool for Generically Visualize and Debug 3D Scenes in OpenGL
 
-This document gives the conventions, the theoretic basis, as well as the implementation details for a generic demo to visualize a 3D scene interactively by using keyboard arrows and other keyboard keys to move the observer around the object, approach the object, go farther away from the object, etc. This is an old program I wrote in C for Silicon Graphics GL in the mid-90's, that I previously ported to OpenGL, and that is now revamped to be shared as an open source software. 
+This document gives the conventions, the theoretic basis, as well as the implementation details for a generic demo to visualize a 3D scene interactively by using mouse or keyboard arrows and other keyboard keys to move the observer around the object, approach the object, go farther away from the object, etc. This is an old program I wrote in C for Silicon Graphics GL in the mid-90's, that I previously ported to OpenGL, and that is now revamped to be shared as an open source software. 
 
 At the time we used gluLookAt to define the camera, and GLUT for user interaction using the keyboard. This is the reason why we need an $\vec{up}$ vector, since it's one of the arguments of  gluLookAt function. GLUT doesn't exist anymore. We substituted it with freeGLUT. This program can be easily ported to other more modern thin libraries that allow to open a window and user interactivity in a portable way, such as GLFW with Glad. 
 
