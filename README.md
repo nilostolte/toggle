@@ -25,18 +25,18 @@ static Point up;
 
 # Conventions and theoretical basis
 
-We show the configuration of $\vec{up}$ (violet colored, identical to $\hat{up}$) and $\vec{V}$ (dark brown colored, where $\hat{v} = \vec{V}/|\vec{V}|$) in the figure below. The coordinate system and the angles $\varphi$ and $\theta$ are also defined here. By convention, $\varphi$ is the angle formed by the projection of a point's position vector onto the XZ plane and the $x$ axis. Also by convention,  $\theta$  is the elevation angle between this position vector and the XZ plane. 
+I show the configuration of $\vec{up}$ (violet colored, identical to $\hat{up}$) and $\vec{V}$ (dark brown colored, where $\hat{v} = \vec{V}/|\vec{V}|$) in the figure below. The coordinate system and the angles $\varphi$ and $\theta$ are also defined here. By convention, $\varphi$ is the angle formed by the projection of a point's position vector onto the XZ plane and the $x$ axis. Also by convention,  $\theta$  is the elevation angle between this position vector and the XZ plane. 
 
 ![](coordinate-system.svg)
 
-The coordinate system on the left in the figure is just the 3D scene coordinate system translated to the center of the object ($c_x$, $c_y$, $c_z$) for clarity. Thus, we can say that in the case of this drawing $c_x=0$, $c_y=0$, $c_z =0$. Notice that this is just for simplification, since in the case of the demo program *cube*, $c_x=0.5$, $c_y=0.5$, $c_z =0.5$.  The observer is positioned at ($obs_x$, $obs_y$, $obs_z$) and looking at  ($c_x$, $c_y$, $c_z$), which in the figure is the origin of the coordinate system. The observer is not explicitly shown in the figure, but is implicitly located at the point where vectors $\vec{V}$ and $\vec{up}$ are applied. We formally define $\vec{V}$ in this way:
+The coordinate system on the left in the figure is just the 3D scene coordinate system translated to the center of the object ($c_x$, $c_y$, $c_z$) for clarity. Thus, we can say that in the case of this drawing $c_x=0$, $c_y=0$, $c_z =0$. Notice that this is just for simplification, since in the case of the demo program *cube*, $c_x=0.5$, $c_y=0.5$, $c_z =0.5$.  The observer is positioned at ($obs_x$, $obs_y$, $obs_z$) and looking at  ($c_x$, $c_y$, $c_z$), which in the figure is the origin of the coordinate system. The observer is not explicitly shown in the figure, but is implicitly located at the point where vectors $\vec{V}$ and $\vec{up}$ are applied. We can formally define $\vec{V}$ in this way:
 
 ```math
 \begin{eqnarray}
 \vec{V} = (obs_x - c_x)\ \vec{i} + (obs_y - c_y)\ \vec{j} + (obs_z - c_z)\ \vec{k}
 \end{eqnarray}
 ```
-We now formally define vector $\hat{v}$,  which has the same direction as $\vec{V}$, but it's normalized:
+We can now formally define vector $\hat{v}$,  which has the same direction as $\vec{V}$, but it's normalized:
 ```math
 \begin{array}{lllll} 
 	\hspace{1mm}{\hat{v}} & = & {\displaystyle\frac{\vec{V}}{|\vec{V}|}} & \\[3pt]
